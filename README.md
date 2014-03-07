@@ -11,4 +11,10 @@ Please define the following environment variables for the build script build_ffm
 * COMPILER_NUM_THREADS
 * LIBRARY_UPDATE
 
+See changes.diff for the changes applied to the original FFmpeg source.
+See LICENSE.txt for more information on the license.
+
+
 ©2013 Ubiquitous Entertainment Inc. All rights reserved.
+
+(FFmpeg is a trademark of Fabrice Bellard)
