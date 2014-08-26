@@ -19,7 +19,6 @@ rm -f libavfilter/vf_blackframe.c
 rm -f libavfilter/vf_boxblur.c
 rm -f libavfilter/vf_colormatrix.c
 rm -f libavfilter/vf_cropdetect.c
-rm -f libavfilter/vf_decimate.c
 rm -f libavfilter/vf_delogo.c
 rm -f libavfilter/vf_geq.c
 rm -f libavfilter/vf_histeq.c
@@ -46,7 +45,6 @@ function build_one
 mkdir $PREFIX
 ./configure \
 --prefix=$PREFIX \
---disable-all \
 --disable-doc \
 --disable-programs \
 --disable-ffmpeg \
@@ -55,40 +53,36 @@ mkdir $PREFIX
 --disable-ffserver \
 --disable-avdevice \
 --disable-symver \
---disable-everything \
---disable-filters \
 --disable-devices \
 --disable-outdevs \
 --disable-indevs \
---disable-protocols \
---disable-bsfs \
---disable-parsers \
---disable-demuxers \
---disable-muxers \
---disable-hwaccels \
---disable-decoders \
---disable-encoders \
 --disable-debug \
 --disable-static \
+--disable-decoder=mpeg1_vdpau \
+--disable-decoder=mpeg1video \
+--disable-decoder=mpeg2_crystalhd \
+--disable-decoder=mpeg2video \
+--disable-decoder=mpeg4 \
+--disable-decoder=mpeg4_crystalhd \
+--disable-decoder=mpeg4_vdpau \
+--disable-decoder=mpeg_vdpau \
+--disable-decoder=mpeg_xvmc \
+--disable-decoder=mpegvideo \
+--disable-decoder=msmpeg4_crystalhd \
+--disable-decoder=msmpeg4v1 \
+--disable-decoder=msmpeg4v2 \
+--disable-decoder=msmpeg4v3 \
+--disable-encoders \
+--enable-encoder=png \
+--enable-encoder=bmp \
+--enable-encoder=mjpeg \
+--enable-encoder=ljpeg \
 --enable-shared \
 --enable-avformat \
 --enable-avcodec \
 --enable-avutil \
 --enable-swresample \
 --enable-swscale \
---enable-protocol=file \
---enable-protocol=ftp \
---enable-protocol=http \
---enable-protocol=httpproxy \
---enable-protocol=https \
---enable-encoder=png \
---enable-encoder=bmp \
---enable-encoder=mjpeg \
---enable-encoder=ljpeg \
---enable-decoder=png \
---enable-decoder=bmp \
---enable-decoder=mjpeg \
---enable-decoder=ljpeg \
 --cross-prefix=$ANDROID_TOOLCHAIN/bin/arm-linux-androideabi- \
 --target-os=linux \
 --arch=arm \

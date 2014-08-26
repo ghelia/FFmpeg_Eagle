@@ -1,5 +1,5 @@
 ***************
-*** 2511,2520 ****
+*** 2520,2529 ****
   SLIBSUF=".so"
   SLIBNAME='$(SLIBPREF)$(FULLNAME)$(SLIBSUF)'
   SLIBNAME_WITH_VERSION='$(SLIBNAME).$(LIBVERSION)'
@@ -10,7 +10,7 @@
   
   asflags_filter=echo
   cflags_filter=echo
---- 2511,2520 ----
+--- 2520,2529 ----
   SLIBSUF=".so"
   SLIBNAME='$(SLIBPREF)$(FULLNAME)$(SLIBSUF)'
   SLIBNAME_WITH_VERSION='$(SLIBNAME).$(LIBVERSION)'
